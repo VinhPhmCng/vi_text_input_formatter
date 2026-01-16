@@ -6,7 +6,7 @@
 
 Simple Flutter package for direct Vietnamese text inputting
 
-Provides `ViTextInputFormatter`, which mimics Unikey (Unicode, Telex)
+Provides `ViTextInputFormatter` that mimics Unikey (Unicode, Telex) when applied to a `TextField`
 
 ## Usage
 
