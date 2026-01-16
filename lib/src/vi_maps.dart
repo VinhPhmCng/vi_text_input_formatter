@@ -1,5 +1,6 @@
 part of 'vi_text_input_formatter.dart';
 
+/// Vietnamese leading consonants.
 /// Ordered by length
 const leadingConsonants = <String>[
   'ngh', //
@@ -9,23 +10,23 @@ const leadingConsonants = <String>[
   'd', 'đ', //
 ];
 
+/// Vietnamese trailing consonants.
 /// Ordered by length
 const trailingConsonants = <String>[
   'ch', 'ng', 'nh', //
   'c', 'm', 'n', 'p', 't', //
 ];
 
-///
+/// Vietnamese modifiers.
 const modifiers = <String>[
   'a', 'i', 'y', 'u', 'e', 'o', //
   's', 'f', 'r', 'x', 'j', 'z', //
   'ư', //
 ];
 
-///
+/// Helper map to convert from vowel+modifer to new vowel after insertion
 const vowelAndModifierToVowel = <String, String>{
-  //// NGUYÊN ÂM
-  /// A
+  //= A
   // -> a, â, ă
   'aa': 'â',
   'ăa': 'â',
@@ -217,7 +218,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ẵz': 'ă',
   'ặz': 'ă',
 
-  /// I
+  //= I
   // i
 
   // i -> i + dấu
@@ -269,7 +270,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ĩz': 'i',
   'ịz': 'i',
 
-  /// Y
+  //= Y
   // y
 
   // y -> y + dấu
@@ -321,7 +322,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ỹz': 'y',
   'ỵz': 'y',
 
-  /// U
+  //= U
   // u, ư, w
   'uư': 'ư',
   'ưư': 'w',
@@ -436,7 +437,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ữz': 'ư',
   'ựz': 'ư',
 
-  /// E
+  //= E
   // e, ê
   'ee': 'ê',
   'êe': 'ee',
@@ -551,7 +552,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ễz': 'ê',
   'ệz': 'ê',
 
-  /// O
+  //= O
   // o, ô, ơ
   'oo': 'ô',
   'ơo': 'ô',
@@ -743,7 +744,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ỡz': 'ơ',
   'ợz': 'ơ',
 
-  /// AI
+  //= AI
   // ai
 
   // ai -> ai + dấu (ở a)
@@ -795,7 +796,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ãiz': 'ai',
   'ạiz': 'ai',
 
-  /// AY
+  //= AY
   // ay, ây
   'aya': 'ây',
   'âya': 'aya',
@@ -910,7 +911,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ẫyz': 'ây',
   'ậyz': 'ây',
 
-  /// AU
+  //= AU
   // au, âu
   'aua': 'âu',
   'âua': 'aua',
@@ -1025,7 +1026,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ẫuz': 'âu',
   'ậuz': 'âu',
 
-  /// AO
+  //= AO
   // ao
 
   // ao -> ao + dấu (ở a)
@@ -1077,7 +1078,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ãoz': 'ao',
   'ạoz': 'ao',
 
-  /// IA
+  //= IA
   // ia
 
   // ia -> ia + dấu (ở i)
@@ -1129,7 +1130,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ĩaz': 'ia',
   'ịaz': 'ia',
 
-  /// IU
+  //= IU
   // iu
 
   // iu -> iu + dấu (ở i)
@@ -1182,7 +1183,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ĩuz': 'iu',
   'ịuz': 'iu',
 
-  /// IE
+  //= IE
   // ie, iê
   'iee': 'iê',
   'iêe': 'iee',
@@ -1297,7 +1298,7 @@ const vowelAndModifierToVowel = <String, String>{
   'iễz': 'iê',
   'iệz': 'iê',
 
-  /// YE
+  //= YE
   // ye, yê
   'yee': 'yê',
   'yêe': 'yee',
@@ -1412,7 +1413,7 @@ const vowelAndModifierToVowel = <String, String>{
   'yễz': 'yê',
   'yệz': 'yê',
 
-  /// UA
+  //= UA
   // ua, uâ, ưa
   'uaa': 'uâ',
   'uâa': 'uaa',
@@ -1592,7 +1593,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ữaz': 'ưa',
   'ựaz': 'ưa',
 
-  /// UI
+  //= UI
   // ui, ưi
   'uiư': 'ưi',
   'ưiư': 'uiw',
@@ -1707,7 +1708,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ữiz': 'ưi',
   'ựiz': 'ưi',
 
-  /// UY
+  //= UY
   // uy
 
   // uy -> uy + dấu (ở u)
@@ -1759,7 +1760,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ũyz': 'uy',
   'ụyz': 'uy',
 
-  /// UU
+  //= UU
   // uu, ưu
   'uuư': 'ưu',
   'ưuư': 'uuw',
@@ -1874,7 +1875,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ữuz': 'ưu',
   'ựuz': 'ưu',
 
-  /// UE
+  //= UE
   // ue, uê
   'uee': 'uê',
   'uêe': 'uee',
@@ -1989,7 +1990,7 @@ const vowelAndModifierToVowel = <String, String>{
   'uễz': 'uê',
   'uệz': 'uê',
 
-  /// UO
+  //= UO
   // uo, uô, ươ, ưo (uwo)
   'uoo': 'uô',
   'ươo': 'uô',
@@ -2245,7 +2246,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ựoz': 'ưo',
   'ưoz': 'ươz',
 
-  /// EO
+  //= EO
   // eo
 
   // eo -> eo + dấu (ở e)
@@ -2297,7 +2298,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ẽoz': 'eo',
   'ẹoz': 'eo',
 
-  /// EU
+  //= EU
   // eu, êu
   'eue': 'êu',
   'êue': 'eue',
@@ -2412,7 +2413,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ễuz': 'êu',
   'ệuz': 'êu',
 
-  /// OA
+  //= OA
   // oa, oă
   'oaư': 'oă',
   'oăư': 'oaw',
@@ -2527,7 +2528,7 @@ const vowelAndModifierToVowel = <String, String>{
   'oẵz': 'oă',
   'oặz': 'oă',
 
-  /// OE
+  //= OE
   // oe
 
   // oe -> oe + dấu (ở o)
@@ -2579,7 +2580,7 @@ const vowelAndModifierToVowel = <String, String>{
   'õez': 'oez',
   'ọez': 'oez',
 
-  /// OI
+  //= OI
   // oi, ôi, ơi
   'oio': 'ôi',
   'ơio': 'ôi',
@@ -2771,7 +2772,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ỡiz': 'ơi',
   'ợiz': 'ơi',
 
-  /// IEU
+  //= IEU
   // ieu, iêu
   'ieue': 'iêu',
   'iêue': 'ieue',
@@ -2886,7 +2887,7 @@ const vowelAndModifierToVowel = <String, String>{
   'iễuz': 'iêu',
   'iệuz': 'iêu',
 
-  /// YEU
+  //= YEU
   // yeu, yêu
   'yeue': 'yêu',
   'yêue': 'yeue',
@@ -3001,7 +3002,7 @@ const vowelAndModifierToVowel = <String, String>{
   'yễuz': 'yêu',
   'yệuz': 'yêu',
 
-  /// UAY
+  //= UAY
   // uay, uây
   'uaya': 'uây',
   'uâya': 'uaya',
@@ -3116,7 +3117,7 @@ const vowelAndModifierToVowel = <String, String>{
   'uẫyz': 'uây',
   'uậyz': 'uây',
 
-  /// UYA
+  //= UYA
   // uya
 
   // uya -> uya + dấu (ở y)
@@ -3174,7 +3175,7 @@ const vowelAndModifierToVowel = <String, String>{
   'uỹaz': 'uya',
   'uỵaz': 'uya',
 
-  /// Uyu
+  //= Uyu
   // uyu
 
   // uyu -> uyu + dấu (ở y)
@@ -3232,7 +3233,7 @@ const vowelAndModifierToVowel = <String, String>{
   'uỹuz': 'uyu',
   'uỵuz': 'uyu',
 
-  /// UYE
+  //= UYE
   // uye, uyê
   'uyee': 'uyê',
   'uyêe': 'uyee',
@@ -3353,7 +3354,7 @@ const vowelAndModifierToVowel = <String, String>{
   'uyễz': 'uyê',
   'uyệz': 'uyê',
 
-  /// UOI
+  //= UOI
   // uoi, uôi, ươi, (ưo + i = ươi)
   'uoio': 'uôi',
   'ươio': 'uôi',
@@ -3558,7 +3559,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ưỡiz': 'ươi',
   'ượiz': 'ươi',
 
-  /// UOU
+  //= UOU
   // uou, ươu, (ưo + u = ươu)
   'uouư': 'ươu',
   'ưou': 'ươu',
@@ -3686,7 +3687,7 @@ const vowelAndModifierToVowel = <String, String>{
   'ưỡuz': 'ươu',
   'ượuz': 'ươu',
 
-  /// OAI
+  //= OAI
   // oai
 
   // oai -> oai + dấu (ở a)
@@ -3744,7 +3745,7 @@ const vowelAndModifierToVowel = <String, String>{
   'oãiz': 'oai',
   'oạiz': 'oai',
 
-  /// OAY
+  //= OAY
   // oay
 
   // oay -> oay + dấu (ở a)
@@ -3802,7 +3803,7 @@ const vowelAndModifierToVowel = <String, String>{
   'oãyz': 'oay',
   'oạyz': 'oay',
 
-  /// OEO
+  //= OEO
   // oeo
 
   // oeo -> oeo + dấu (ở e)
@@ -3861,30 +3862,30 @@ const vowelAndModifierToVowel = <String, String>{
   'oẹoz': 'oeo',
 };
 
-///
+/// Helper map to convert from vowel to new vowel+consonant after insertion
 const vowelToVowelWithTrailingConsonant = <String, String>{
-  /// ua
+  //= ua
   'úa': 'uá',
   'ùa': 'uà',
   'ủa': 'uả',
   'ũa': 'uã',
   'ụa': 'uạ',
 
-  /// uy
+  //= uy
   'úy': 'uý',
   'ùy': 'uỳ',
   'ủy': 'uỷ',
   'ũy': 'uỹ',
   'ụy': 'uỵ',
 
-  /// uo
+  //= uo
   'úo': 'uó',
   'ùo': 'uò',
   'ủo': 'uỏ',
   'ũo': 'uõ',
   'ụo': 'uọ',
 
-  /// ưo
+  //= ưo
   'ưo': 'ươ',
   'ứo': 'ướ',
   'ừo': 'ườ',
@@ -3892,14 +3893,14 @@ const vowelToVowelWithTrailingConsonant = <String, String>{
   'ữo': 'ưỡ',
   'ựo': 'ượ',
 
-  /// oa
+  //= oa
   'óa': 'oá',
   'òa': 'oà',
   'ỏa': 'oả',
   'õa': 'oã',
   'ọa': 'oạ',
 
-  /// oe
+  //= oe
   'óe': 'oé',
   'òe': 'oè',
   'ỏe': 'oẻ',
@@ -3907,9 +3908,10 @@ const vowelToVowelWithTrailingConsonant = <String, String>{
   'ọe': 'oẹ',
 };
 
-///
+/// Helper map to convert from vowel+modifier to new vowel+consonant after
+/// insertion
 const vowelAndModifierToVowelWithTrailingConsonant = <String, String>{
-  /// UA
+  //= UA
   // ua, uâ, ưa
   'uaa': 'uâ',
   'uâa': 'uaa',
@@ -4029,7 +4031,7 @@ const vowelAndModifierToVowelWithTrailingConsonant = <String, String>{
 
   // ưaz (not necessary)
 
-  /// UY
+  //= UY
   // uy
 
   // uy -> uy + dấu (ở y)
@@ -4081,7 +4083,7 @@ const vowelAndModifierToVowelWithTrailingConsonant = <String, String>{
   'uỹz': 'uy',
   'uỵz': 'uy',
 
-  /// UO
+  //= UO
   // uo, uô, ươ, ưo (uwo)
   'uoo': 'uô',
   'ươo': 'uô',
@@ -4227,7 +4229,7 @@ const vowelAndModifierToVowelWithTrailingConsonant = <String, String>{
   // ưoz (has a special one - the last one)
   'ưoz': 'ươz',
 
-  /// OA
+  //= OA
   // oa, oă
   'oaư': 'oă',
   'oăư': 'oaw',
@@ -4312,7 +4314,7 @@ const vowelAndModifierToVowelWithTrailingConsonant = <String, String>{
 
   // oăz (not necessary)
 
-  /// OE
+  //= OE
   // oe
 
   // oe -> oe + dấu (ở e)
@@ -4365,37 +4367,37 @@ const vowelAndModifierToVowelWithTrailingConsonant = <String, String>{
   'oẹz': 'oe',
 };
 
-///
+/// Helper map to convert from vowel to new vowel after deletion
 const vowelAfterDeletionToVowel = <String, String>{
-  /// ua
+  //= ua
   'uá': 'úa',
   'uà': 'ùa',
   'uả': 'ủa',
   'uã': 'ũa',
   'uạ': 'ụa',
 
-  /// uy
+  //= uy
   'uý': 'úy',
   'uỳ': 'ùy',
   'uỷ': 'ủy',
   'uỹ': 'ũy',
   'uỵ': 'ụy',
 
-  /// uo
+  //= uo
   'uó': 'úo',
   'uò': 'ùo',
   'uỏ': 'ủo',
   'uõ': 'ũo',
   'uọ': 'ụo',
 
-  /// oa
+  //= oa
   'oá': 'óa',
   'oà': 'òa',
   'oả': 'ỏa',
   'oã': 'õa',
   'oạ': 'ọa',
 
-  /// oe
+  //= oe
   'oé': 'óe',
   'oè': 'òe',
   'oẻ': 'ỏe',
@@ -4403,7 +4405,7 @@ const vowelAfterDeletionToVowel = <String, String>{
   'oẹ': 'ọe',
 };
 
-///
+/// Helper map to convert from 'gi' to new 'gi' after insertion
 const giAndModifierToGi = <String, String>{
   // gi -> gi + dấu
   'gis': 'gí',
@@ -4455,7 +4457,7 @@ const giAndModifierToGi = <String, String>{
   'gịz': 'gi',
 };
 
-///
+/// Helper map to convert from 'gi'+modifier to new 'gi'+vowel after insertion
 const giAndModifierToGiAndVowel = <String, String>{
   // gí
   'gía': 'giá',
