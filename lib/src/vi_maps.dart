@@ -3864,6 +3864,13 @@ const vowelAndModifierToVowel = <String, String>{
 
 /// Helper map to convert from vowel to new vowel+consonant after insertion
 const vowelToVowelWithTrailingConsonant = <String, String>{
+  //= ie
+  'íe': 'ié',
+  'ìe': 'iè',
+  'ỉe': 'iẻ',
+  'ĩe': 'iẽ',
+  'ịe': 'iẹ',
+
   //= ua
   'úa': 'uá',
   'ùa': 'uà',
@@ -3911,6 +3918,89 @@ const vowelToVowelWithTrailingConsonant = <String, String>{
 /// Helper map to convert from vowel+modifier to new vowel+consonant after
 /// insertion
 const vowelAndModifierToVowelWithTrailingConsonant = <String, String>{
+  //= IE
+  // ie, iê
+  'iee': 'iê',
+  'iêe': 'iee',
+
+  // ie -> ie + dấu (ở e)
+  'ies': 'ié',
+  'ief': 'iè',
+  'ier': 'iẻ',
+  'iex': 'iẽ',
+  'iej': 'iẹ',
+  // iê + dấu -> ie + dấu (ở e) + e
+  'iếe': 'iée',
+  'iềe': 'ièe',
+  'iểe': 'iẻe',
+  'iễe': 'iẽe',
+  'iệe': 'iẹe',
+
+  // ié
+  'iés': 'ies',
+  'iéf': 'iè',
+  'iér': 'iẻ',
+  'iéx': 'iẽ',
+  'iéj': 'iẹ',
+
+  // iè
+  'iès': 'ié',
+  'ièf': 'ief',
+  'ièr': 'iẻ',
+  'ièx': 'iẽ',
+  'ièj': 'iẹ',
+
+  // iẻ
+  'iẻs': 'ié',
+  'iẻf': 'iè',
+  'iẻr': 'ier',
+  'iẻx': 'iẽ',
+  'iẻj': 'iẹ',
+
+  // iẽ
+  'iẽs': 'ié',
+  'iẽf': 'iè',
+  'iẽr': 'iẻ',
+  'iẽx': 'iex',
+  'iẽj': 'iẹ',
+
+  // iẹ
+  'iẹs': 'ié',
+  'iẹf': 'iè',
+  'iẹr': 'iẻ',
+  'iẹx': 'iẽ',
+  'iẹj': 'iej',
+
+  // iez
+  'iéz': 'ie',
+  'ièz': 'ie',
+  'iẻz': 'ie',
+  'iẽz': 'ie',
+  'iẹz': 'ie',
+
+  // iê -> iê + dấu (not necessary)
+  // ie + dấu (ở e) -> iê + dấu
+  'iée': 'iế',
+  'ièe': 'iề',
+  'iẻe': 'iể',
+  'iẽe': 'iễ',
+  'iẹe': 'iệ',
+
+  // iế
+  'iếs': 'iês',
+
+  // iề
+  'iềf': 'iêf',
+
+  // iể
+  'iểr': 'iêr',
+
+  // iễ
+  'iễx': 'iêx',
+
+  // iệ
+  'iệj': 'iêj',
+
   //= UA
   // ua, uâ, ưa
   'uaa': 'uâ',
@@ -4369,6 +4459,13 @@ const vowelAndModifierToVowelWithTrailingConsonant = <String, String>{
 
 /// Helper map to convert from vowel to new vowel after deletion
 const vowelAfterDeletionToVowel = <String, String>{
+  //= ie
+  'ié': 'íe',
+  'iè': 'ìe',
+  'iẻ': 'ỉe',
+  'iẽ': 'ĩe',
+  'iẹ': 'ịe',
+
   //= ua
   'uá': 'úa',
   'uà': 'ùa',
