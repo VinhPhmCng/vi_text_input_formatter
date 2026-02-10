@@ -1,6 +1,6 @@
 name: vi_text_input_formatter
 description: Simple Flutter package for direct Vietnamese text inputting
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/VinhPhmCng/vi_text_input_formatter
 issue_tracker: https://github.com/VinhPhmCng/vi_text_input_formatter/issues
 topics:
