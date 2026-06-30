@@ -1,3 +1,7 @@
+## 1.0.2
+- Improve: w <-> ư conversions
+- Fix: uo + dấu (ở o) -> uô + dấu
+
 ## 1.0.1
 - Handles:
     - kíe + m -> kiém
