@@ -207,7 +207,11 @@ class ViTextInputFormatter extends TextInputFormatter {
 
     // Insertion
     if (currentWord.endsWith('w')) {
-      currentWord = '${currentWord.left(-1)}ư';
+      currentWord = currentWord.endsWith('ưw')
+          ? '${currentWord.left(-2)}w'
+          : currentWord.endsWith('ww')
+          ? currentWord
+          : '${currentWord.left(-1)}ư';
     }
     final vn = toVn(currentWord, isDeletion: false);
     final newText = '$before$vn$after';
