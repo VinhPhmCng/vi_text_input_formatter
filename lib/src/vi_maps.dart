@@ -4247,11 +4247,11 @@ const vowelAndModifierToVowelWithTrailingConsonant = <String, String>{
 
   // uô -> uô + dấu (not necessary)
   // uo + dấu (ở o) -> uô + dấu
-  'úoo': 'uố',
-  'ùoo': 'uồ',
-  'ủoo': 'uổ',
-  'ũoo': 'uỗ',
-  'ụoo': 'uộ',
+  'uóo': 'uố',
+  'uòo': 'uồ',
+  'uỏo': 'uổ',
+  'uõo': 'uỗ',
+  'uọo': 'uộ',
   // ươ + dấu -> uô + dấu (not necessary)
   // ưo + dấu -> uô + dấu (not necessary)
 
